@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="theme-color" content="#6b8e4a">
+<title>苏州园区新东方 · 初中英语师资</title>
+<meta name="description" content="新东方苏州工业园区初中英语师资介绍 · 5 大校区 · 10 位骨干教师 · 学员口碑">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== Compact header ========== -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand-logo">
+      <span class="dot">新</span>
+      <div class="brand-text">
+        <strong>新东方 · 初中英语</strong>
+        <small>苏州工业园区 · 师资介绍</small>
+      </div>
+    </div>
+    <a href="#campuses" class="topbar-cta">选择校区 →</a>
+  </div>
+</header>
+
+<!-- ========== Main: groups & teachers ========== -->
+<main id="campuses">
+  <div class="container">
+
+    <div class="lead">
+      <h1>选择校区，<span class="hl">查看老师</span></h1>
+      <p>园区 5 大校区分为 3 组（同组共享师资）· 点击老师卡片查看完整简介与好评。</p>
+    </div>
+
+    <!-- group tabs -->
+    <div class="group-tabs" id="groupTabs"></div>
+
+    <!-- group detail (campuses + teachers) -->
+    <div id="groupDetail"></div>
+  </div>
+</main>
+
+<!-- ========== Reviews (school-wide, NOT campus-specific) — collapsed cards ========== -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-eyebrow">SCHOOL-WIDE · 全校共享</div>
+      <h2 class="sec-title">全校学员口碑</h2>
+      <p class="sec-sub">不分校区 · 园区初中英语整体反馈 · 点击下方任一卡片展开查看。</p>
+    </div>
+
+    <div class="review-cards" id="reviewCards">
+      <button class="rev-card" data-tab="results">
+        <div class="rev-card-icon">🏆</div>
+        <div class="rev-card-title">能提分</div>
+        <div class="rev-card-sub">战报 · 高分案例</div>
+        <div class="rev-card-arrow">点击展开 ↓</div>
+      </button>
+      <button class="rev-card" data-tab="parents">
+        <div class="rev-card-icon">💬</div>
+        <div class="rev-card-title">老师好</div>
+        <div class="rev-card-sub">家长 · 学员反馈</div>
+        <div class="rev-card-arrow">点击展开 ↓</div>
+      </button>
+      <button class="rev-card" data-tab="method">
+        <div class="rev-card-icon">📚</div>
+        <div class="rev-card-title">模式好</div>
+        <div class="rev-card-sub">教学模式 · 体验</div>
+        <div class="rev-card-arrow">点击展开 ↓</div>
+      </button>
+    </div>
+
+    <div class="review-pane" id="pane-results">
+      <div class="results-strip" id="resultsStrip"></div>
+      <div class="feedback-grid" id="resultsExtra"></div>
+    </div>
+    <div class="review-pane" id="pane-parents">
+      <div class="feedback-grid" id="parentsGrid"></div>
+    </div>
+    <div class="review-pane" id="pane-method">
+      <div class="feedback-grid" id="methodGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Footer ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-tag">NEW ORIENTAL · 新东方</div>
+        <h5>苏州工业园区初中英语</h5>
+        <p>5 大校区 · 10 位骨干教师 · 7-9 年级初中英语<br>专注于江苏省初中英语教学与中考冲刺</p>
+      </div>
+      <div>
+        <h5>湖东校区</h5>
+        <ul><li>👑 旺墩路</li><li>兆佳巷</li><li>方洲</li></ul>
+      </div>
+      <div>
+        <h5>湖西校区</h5>
+        <ul><li>凤凰广场</li><li>星海</li></ul>
+      </div>
+      <div class="footer-contact">
+        <h5>课程咨询 · 学习规划老师</h5>
+        <div class="footer-qr-row">
+          <div class="footer-qr-item">
+            <img class="qr-mini" src="assets/contact/yangyang.jpg" alt="洋洋老师二维码"
+                 onerror="this.style.display='none'">
+            <div class="ct-name">洋洋老师</div>
+          </div>
+          <div class="footer-qr-item">
+            <img class="qr-mini" src="assets/contact/li.jpg" alt="李老师二维码"
+                 onerror="this.style.display='none'">
+            <div class="ct-name">李老师</div>
+          </div>
+        </div>
+        <div class="ct-role">学习规划老师 · 扫码咨询</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 新东方 · 苏州工业园区初中英语</span>
+      <span>仅供家长查阅 · 内容如有更新以校区现场为准</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== Modal ========== -->
+<div class="modal-mask" id="modalMask">
+  <div class="modal" id="modalBox">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ========== Lightbox ========== -->
+<div class="lightbox" id="lightbox">
+  <span class="lb-close">✕</span>
+  <img id="lbImg" src="" alt="">
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
